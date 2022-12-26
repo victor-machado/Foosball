@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:background="#DDEEFF"
+    tools:context=".ui.ranking.RankingActivity">
+
+    <TextView
+        android:id="@+id/txtPlayerName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtGames"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Diego"/>
+
+    <TextView
+        android:id="@+id/txtGames"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtPlayerName"
+        app:layout_constraintEnd_toStartOf="@id/txtWins"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="10" />
+
+    <TextView
+        android:id="@+id/txtWins"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtGames"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="6"/>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/imgP2Winner"-->
+    <!--        android:layout_height="18dp"-->
+    <!--        android:layout_width="18dp"-->
+    <!--        android:src="@drawable/medal"-->
+    <!--        android:layout_marginTop="2dp"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintStart_toStartOf="@id/txtPlayer2Name"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/txtPlayer2Name"-->
+    <!--        app:layout_constraintEnd_toEndOf="@id/txtPlayer2Name"-->
+    <!--        tools:visibility="visible"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

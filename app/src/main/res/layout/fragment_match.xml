@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral90"
+    android:padding="@dimen/space16"
+    tools:context=".ui.play.PlayActivity">
+
+    <TextView
+        android:id="@+id/txtTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:text="0"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStartMatch"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSelectP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_player1"
+        android:textSize="16sp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/spnPlayer1"
+        app:layout_constraintEnd_toStartOf="@id/txtSelectP2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSelectP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_player2"
+        android:textSize="16sp"
+        android:textColor="@color/teal_200"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/spnPlayer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtSelectP1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnPlayer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:backgroundTint="@color/cardview_light_background"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectP1"
+        app:layout_constraintBottom_toTopOf="@id/txtScoreP1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/spnPlayer2"/>
+
+    <Spinner
+        android:id="@+id/spnPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintTop_toBottomOf="@+id/txtSelectP2"
+        app:layout_constraintBottom_toTopOf="@id/txtScoreP2"
+        app:layout_constraintStart_toEndOf="@id/spnPlayer1"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtScoreP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/four"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/btnScoreP1"
+        app:layout_constraintEnd_toStartOf="@id/spnPlayer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spnPlayer1" />
+
+    <TextView
+        android:id="@+id/txtScoreP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/two"
+        android:textSize="40sp"
+        android:textColor="@color/teal_200"
+        app:layout_constraintBottom_toTopOf="@id/btnScoreP2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtScoreP1"
+        app:layout_constraintTop_toBottomOf="@id/spnPlayer2" />
+
+    <Button
+        android:id="@+id/btnScoreP1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@id/btnStartMatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnScoreP2"
+        app:layout_constraintTop_toBottomOf="@id/txtScoreP1"/>
+
+    <Button
+        android:id="@+id/btnScoreP2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:textColor="@color/teal_200"
+        android:textAllCaps="false"
+        android:enabled="false"
+        app:layout_constraintBottom_toTopOf="@id/btnStartMatch"
+        app:layout_constraintStart_toEndOf="@id/btnScoreP1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtScoreP2"/>
+
+    <Button
+        android:id="@+id/btnStartMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_match"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
